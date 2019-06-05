@@ -1,6 +1,8 @@
 <title>The Movies I've Watched</title>
   <%= render 'layouts/header' %>
   <%= render 'layouts/sidebar' %>
+
+<article class="movie">
 <ul>
   <%= image_for(@movie) %>
   <h2>Description</h2>
@@ -34,6 +36,7 @@
   <%= @movie.duration %>
 </p>
 </ul>
+</article>
 
 <nav>
   <%= link_to "Edit", edit_movie_path(@movie) %>
