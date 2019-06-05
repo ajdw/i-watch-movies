@@ -1,0 +1,28 @@
+<!-- THIS IS OUR VIEW FILE -->
+<title>The Movies I've Watched</title>
+<%= render 'layouts/header' %>
+
+
+
+<%= render 'layouts/sidebar' %>
+
+<ul>
+<% @movies.each do |movie| %>
+
+	  <%= image_for(movie) %>
+  <h2><%= link_to movie.title, movie %></h2>
+  <h3><%= movie.cast %></h3>
+
+  <%= truncate(movie.description, length: 100, separator: ' ') %>
+
+  <p><b>Rating:</b> (<%= movie.rating %>)</p>
+  <p><b>Released:</b>  <%= movie.released_on %></p>
+  <p><b>Duration:</b>  <%= movie.duration %></p>
+  <p><b>Total Gross:</b> <%= format_total_gross(movie) %></p>
+
+   <hr>
+<% end %>
+</ul>
+
+
+<%= render 'layouts/footer' %>
