@@ -2,37 +2,47 @@
 <title>The Movies I've Watched</title>
 <%= render 'layouts/header' %>
 
-<%= render 'layouts/sidebar' %>
+<%= render 'layouts/navbar' %>
 
 
 
 <% @movies.each do |movie| %>
-<div class ="movie-box">
-<article class="movie">
-<!-- 	<table>
-		<tr>
-			<th>Rating: (<%= movie.rating %>)</th>
-			<th>Released: <%= movie.released_on %></th>
-			<th>Rating: <%= movie.duration %></th>
-			<th>Total Gross: <%= format_total_gross(movie) %></th>
-		</tr>
-	</table> -->
-	<%= image_for(movie) %>
+<div class ="movie-grid">
+<div class="movie">
+	<div class="movie-card">
+	<div class="movie-card-inner">
+  	<div class="movie-card-front">
+      <%= image_for(movie) %>
+    </div>
 
-<div class="movie-description">
+    <div class="movie-card-back">
+    	
+  		<div id="movie-title"><%= link_to movie.title, movie %></div>
+  		  	<p><%= truncate(movie.description, length: 100, separator: ' ') %></p>
+  			<p><b>CAST: </b><%= movie.cast %></p>
+				<p><b>RATING:</b> (<%= movie.rating %>)</p>
+				<p><b>RELEASED:</b>  <%= movie.released_on %></p>
+				<p><b>DURATION:</b>  <%= movie.duration %></p>
+				<p><b>TOTAL GROSS:</b> <%= format_total_gross(movie) %></p>
+				<div>
 
-  <h2 id="movie-title"><%= link_to movie.title, movie %></h2>
-  	<h3><%= movie.cast %></h3>
+				 <button id="delete-button">
+				 <%= link_to "DELETE", movie, method: :delete, data: { confirm: 'Are you sure?' } %>
+				</button>
+				</div>
+    </div>
+  </div>
+</div>
 
-  <%= truncate(movie.description, length: 100, separator: ' ') %>
-  <hr>
-
-  <p><b>Rating:</b> (<%= movie.rating %>)</p>
-  <p><b>Released:</b>  <%= movie.released_on %></p>
-  <p><b>Duration:</b>  <%= movie.duration %></p>
-  <p><b>Total Gross:</b> <%= format_total_gross(movie) %></p>
+	</div>
 </div>
 <% end %>
-</article>
+
 
 <%= render 'layouts/footer' %>
+
+
+
+
+
+

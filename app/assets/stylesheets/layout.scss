@@ -4,7 +4,7 @@
 header#page-header {
   color: $secondary-color;
   background: $primary-color;
-  padding: 5px;
+  padding: 1px;
   border-bottom: 3px solid darken($primary-color, 10%);
   font-family: 'Lato', serif;
   
@@ -19,11 +19,38 @@ footer#page-footer {
   background: $secondary-color;
   text-align: center;
   padding: 5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
-aside#sidebar {
-  float: right;
-  background: $secondary-color;
-  width: 200px;
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  top: 0;
+  width: 100%;
 }
 
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}

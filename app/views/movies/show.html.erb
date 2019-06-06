@@ -1,46 +1,59 @@
 <title>The Movies I've Watched</title>
   <%= render 'layouts/header' %>
-  <%= render 'layouts/sidebar' %>
+  <ul>
+  <li class="active"><%= link_to 'All Movies', movies_path %></li>
+  <li><%= link_to 'Add New Movie', new_movie_path %></li>
+  <li><%= link_to "Edit", edit_movie_path(@movie) %></li>
+  <li><%= link_to "Delete", movie_path(@movie), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+</ul>
+
+
 
 <article class="movie">
-<ul>
+  <ul>
   <%= image_for(@movie) %>
-  <h1><%= @movie.title %></h1>
-  <h2>Description</h2>
-  <p>
-    <%= @movie.description %>
-  </p>
-  <h3>Rating</h3>
-  <p>
-    <%= @movie.rating %>
-  </p>
-  <h3>Released On</h3>
-  <p>
-    <%= @movie.released_on %>
-  </p>
-  <h3>Total Gross</h3>
-  <p>
-    <%= format_total_gross(@movie) %>
-  </p>
-  <h3>Cast</h3>
-<p>
-  <%= @movie.cast %>
-</p>
+    <h1><%= @movie.title %></h1>
 
-<h3>Director</h3>
-<p>
-  <%= @movie.director %>
-</p>
+      <h2>Description</h2>
+        <p>
+          <%= @movie.description %>
+        </p>
 
-<h3>Duration</h3>
-<p>
-  <%= @movie.duration %>
-</p>
-</ul>
+      <h3>Rating</h3>
+        <p>
+         <%= @movie.rating %>
+        </p>
+
+      <h3>Released On</h3>
+        <p>
+          <%= @movie.released_on %>
+        </p>
+
+      <h3>Total Gross</h3>
+        <p>
+          <%= format_total_gross(@movie) %>
+        </p>
+
+      <h3>Cast</h3>
+        <p>
+         <%= @movie.cast %>
+        </p>
+
+      <h3>Director</h3>
+        <p>
+       <%= @movie.director %>
+        </p>
+
+      <h3>Duration</h3>
+        <p>
+          <%= @movie.duration %>
+        </p>
+  </ul>
 </article>
 
 <nav>
   <%= link_to "Edit", edit_movie_path(@movie) %>
+
   <%= link_to "Delete", movie_path(@movie), method: :delete, data: { confirm: 'Are you sure?' } %>
 </nav>
 
