@@ -4,24 +4,35 @@
 
 <%= render 'layouts/sidebar' %>
 
-<article class="movie">
-<ul>
-<% @movies.each do |movie| %>
 
-	  <%= image_for(movie) %>
-  <h2><%= link_to movie.title, movie %></h2>
-  <h3><%= movie.cast %></h3>
+
+<% @movies.each do |movie| %>
+<div class ="movie-box">
+<article class="movie">
+<!-- 	<table>
+		<tr>
+			<th>Rating: (<%= movie.rating %>)</th>
+			<th>Released: <%= movie.released_on %></th>
+			<th>Rating: <%= movie.duration %></th>
+			<th>Total Gross: <%= format_total_gross(movie) %></th>
+		</tr>
+	</table> -->
+	<%= image_for(movie) %>
+
+<div class="movie-description">
+
+  <h2 id="movie-title"><%= link_to movie.title, movie %></h2>
+  	<h3><%= movie.cast %></h3>
 
   <%= truncate(movie.description, length: 100, separator: ' ') %>
+  <hr>
 
   <p><b>Rating:</b> (<%= movie.rating %>)</p>
   <p><b>Released:</b>  <%= movie.released_on %></p>
   <p><b>Duration:</b>  <%= movie.duration %></p>
   <p><b>Total Gross:</b> <%= format_total_gross(movie) %></p>
-
-   <hr>
+</div>
 <% end %>
-</ul>
 </article>
 
 <%= render 'layouts/footer' %>
