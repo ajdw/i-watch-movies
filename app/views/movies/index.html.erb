@@ -5,7 +5,6 @@
 <%= render 'layouts/navbar' %>
 
 
-
 <% @movies.each do |movie| %>
 <div class ="movie-grid">
 <div class="movie">
@@ -24,8 +23,9 @@
 				<p><b>RELEASED:</b>  <%= movie.released_on %></p>
 				<p><b>DURATION:</b>  <%= movie.duration %></p>
 				<p><b>TOTAL GROSS:</b> <%= format_total_gross(movie) %></p>
-				<div>
+				<i class="far fa-eye seen"></i></p>
 
+				<div>
 				 <button id="delete-button">
 				 <%= link_to "DELETE", movie, method: :delete, data: { confirm: 'Are you sure?' } %>
 				</button>
@@ -37,6 +37,7 @@
 	</div>
 </div>
 <% end %>
+
 
 
 <%= render 'layouts/footer' %>

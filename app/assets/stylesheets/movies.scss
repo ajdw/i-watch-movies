@@ -119,4 +119,19 @@ div.movie {
   text-decoration: none;
 }
 
+.seen {
+  font-size: 20px;
+  color: blue;
+  margin-left: 2px;
+  display: block;
+}
+
+i:hover {
+  color: yellow;
+}
+
+.fa-eye-slash {
+  color: red;
+}
+
 
