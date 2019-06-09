@@ -36,7 +36,8 @@
 
 
 p {
-  font-size: 11px;
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
   margin: 8px 5px;
 }
 
@@ -50,8 +51,7 @@ p {
 .movie-grid {
   display: inline-grid;
   grid-template-columns: auto auto auto auto;
-  grid-gap: 5px;
-  margin: 5px;
+
   text-align: center;
 }
 
@@ -121,17 +121,35 @@ div.movie {
 
 .seen {
   font-size: 20px;
-  color: blue;
-  margin-left: 2px;
-  display: block;
+  color: #3493ff;
+  margin-left: 5px;
+  position: absolute;
+  bottom: 20px;
 }
 
-i:hover {
+.seen:hover {
   color: yellow;
 }
 
 .fa-eye-slash {
-  color: red;
+  color: #f43030;
 }
+
+.flash {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.notice {
+  background-color: green;
+}
+
+.alert {
+  background-color: red;
+}
+
 
 

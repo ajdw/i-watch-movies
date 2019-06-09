@@ -11,6 +11,21 @@
   </head>
   <body>
  <!-- yield returns the html output that an action generates -->
+
+  <% if flash[:notice] %>
+      <p class="flash notice">
+        <%= flash[:notice] %>
+      </p>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <p class="flash alert">
+       <%= flash[:alert] %>
+      </p>
+    <% end %>
+
+
     <%= yield %>
+
   </body>
 </html>

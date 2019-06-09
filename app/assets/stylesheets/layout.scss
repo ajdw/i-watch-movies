@@ -1,6 +1,15 @@
 @import "colors";
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
+body {
+  background-image: url("bg/groove.jpg");
+  background-repeat: repeat;
+}
+
+.navigation-station {
+  margin-bottom: 5px;
+}
+
 header#page-header {
   color: $secondary-color;
   background: $primary-color;
@@ -14,9 +23,10 @@ header#page-header {
 	 }
 }
 
+
 footer#page-footer {
   color: $primary-color;
-  background: $secondary-color;
+  background: #2b2b29;
   text-align: center;
   padding: 5px;
   position: absolute;
