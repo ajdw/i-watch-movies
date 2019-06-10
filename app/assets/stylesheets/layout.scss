@@ -32,6 +32,7 @@ footer#page-footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+  left: 0;
 }
 
 
@@ -49,6 +50,7 @@ li {
   float: left;
 }
 
+
 li a {
   display: block;
   color: white;
@@ -57,10 +59,170 @@ li a {
   text-decoration: none;
 }
 
+
 li a:hover:not(.active) {
   background-color: #111;
 }
 
+
 .active {
   background-color: #4CAF50;
 }
+
+
+#movie-title { 
+  padding-top: 10px;
+}
+
+
+#movie-title {
+  letter-spacing: 1px;
+  margin-left: 5px;
+  font-family: sans-serif;
+}
+
+
+#movie-title a{
+  font-size: 15px;
+  color: yellow;
+}
+
+#movie-title a:hover {
+  color: blue;
+}
+
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  margin: 8px 5px;
+}
+
+
+.movie-attribute {
+  background-color: black;
+  padding: 3px;
+  border-radius: 4px;
+  vertical-align: center;
+}
+
+
+.movie-grid {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+
+  text-align: center;
+}
+
+
+div.movie {
+  img {
+    width: 170px;
+    height: 250px;
+  }
+}
+
+
+.movie-card {
+  background-color: transparent;
+  width: 170px;
+  height: 250px;
+  perspective: 1000px;
+}
+
+
+.movie-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+
+.movie-card:hover .movie-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.movie-card-front, .movie-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+
+.movie-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+
+.movie-card-back {
+  background-color: #465163;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+#delete-button {
+  background-color: #ff8490;
+  border: none;
+  padding: 2px 3px;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+
+
+#delete-button:hover {
+  background-color: #ff0018;
+}
+
+
+#delete-button a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.seen {
+  font-size: 20px;
+  color: #3493ff;
+  margin-left: 5px;
+  position: absolute;
+  bottom: 20px;
+}
+
+
+.seen:hover {
+  color: yellow;
+}
+
+
+.fa-eye-slash {
+  color: #f43030;
+}
+
+
+.flash {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+.notice {
+  background-color: green;
+}
+
+
+.alert {
+  background-color: red;
+}
+
