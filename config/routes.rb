@@ -1,4 +1,5 @@
 =begin Rails.application.routes.draw do
+  resources :reviews
    For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get "events" => "events#index"
 =end 
@@ -12,6 +13,8 @@ Rails.application.routes.draw do
   # patch "movies/:id" => "movies#update"
 
   # uses a built-in Rails convention to dynamically define a bunch of routes
-  resources :movies
+  resources :movies do
+    resources :reviews
+  end
 
 end

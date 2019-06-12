@@ -51,6 +51,7 @@
           </p>
     </ul>
   </div>
+  <%= link_to pluralize(@movie.reviews.size, "review"),movie_reviews_path(@movie) %>
 </article>
 
 
