@@ -1,3 +1,81 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* reviews link */
+.reviews, .write-review {
+	font-size: 20px;
+	background-color: white;
+	font-family: 'Lato', sans-serif;
+
+}
+
+.review-title {
+	color: lightgreen;
+}
+
+
+.review {
+	background-color: white;
+	width: 30%;
+	border-radius: 5px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.review > p {
+	font-size: 20px;
+	margin-left: 12px;
+}
+
+#user {
+	background-color: #afceff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding-bottom: 5px;
+	padding-top: 10px;
+	padding-left: 10px;
+	border-bottom: 2px solid #7681DF;
+}
+
+#user-name {
+	font-size: 20px;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+}
+
+#time-posted {
+	color: black;
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	margin-right: 5%;
+	float: right;
+	margin-top: 6px;
+}
+
+#star {
+	font-size: 20px;
+}
+
+#user, #date {
+	font-size: 15px;
+}
+
+
+/*
+<header id="content-header">
+  <h1>Reviews for <%= link_to(@movie.title, @movie) %></h1>
+</header>
+
+
+  <% @reviews.each do |review| %>
+  <div class="review">
+      <p class="star"><%= pluralize(review.stars, 'star') %></p>
+      <p class="user">by <%= review.name %></p>
+      <p class="date"><%= time_ago_in_words(review.created_at) %> ago</p>
+      <p>
+        &quot;<%= review.comment %>&quot;
+      </p>
+  </div>
+  <% end %>
+*/

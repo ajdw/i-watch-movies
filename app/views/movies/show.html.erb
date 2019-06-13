@@ -1,6 +1,6 @@
 <title>The Movies I've Watched</title>
   <%= render 'layouts/header' %>
-  <ul>
+  <ul class="nav-bar">
   <li class="active"><%= link_to 'All Movies', movies_path %></li>
   <li><%= link_to 'Add New Movie', new_movie_path %></li>
   <li><%= link_to "Edit", edit_movie_path(@movie) %></li>
@@ -51,8 +51,13 @@
           </p>
     </ul>
   </div>
-  <%= link_to pluralize(@movie.reviews.size, "review"),movie_reviews_path(@movie) %>
+    <%= link_to pluralize(@movie.reviews.size, "review"),movie_reviews_path(@movie), class: "reviews" %>
+      <%= link_to "Write Review", new_movie_review_path(@movie),
+             class: 'button ok write-review' %>
+
 </article>
+
+
 
 
 <%= render 'layouts/footer' %>

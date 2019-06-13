@@ -36,7 +36,7 @@ footer#page-footer {
 }
 
 
-ul {
+.nav-bar {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -48,12 +48,12 @@ ul {
 }
 
 
-li {
+.nav-bar > li {
   float: left;
 }
 
 
-li a {
+.nav-bar > li > a {
   display: block;
   color: white;
   text-align: center;
@@ -62,7 +62,7 @@ li a {
 }
 
 
-li a:hover:not(.active) {
+.nav-bar > li a:hover:not(.active) {
   background-color: #111;
 }
 

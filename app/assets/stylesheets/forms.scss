@@ -8,6 +8,15 @@ fieldset, h1 {
 	font-size: 16px;
 }
 
-a {
-	color: pink;
+.cancel-link {
+	border-radius: 5px;
+	padding: 4px;
+	background-color: orange;
+	color: black;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.cancel-link:hover {
+	background-color: red;
 }

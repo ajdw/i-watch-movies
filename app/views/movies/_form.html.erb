@@ -1,8 +1,8 @@
 <%= form_for(@movie) do |f| %>
-   <%= render "shared/errors" %>
+  <%= render "shared/errors", object: @movie %>
 
    <fieldset>
-   <ol>
+   <ol id="movie-form">
   <p class="form-field">
     <%= f.label :title %><br/>
     <%= f.text_field :title, autofocus: true %>
@@ -44,7 +44,7 @@
 
   <p>
     <%= f.submit %> |
-    <%= link_to "Cancel", movies_path %>
+    <%= link_to "CANCEL", movies_path, class: "cancel-link" %>
   </p>
   </ol>
   </fieldset
