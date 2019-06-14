@@ -7,6 +7,10 @@
   <li><%= link_to "Delete", movie_path(@movie), method: :delete, data: { confirm: 'Are you sure?' } %></li>
 </ul>
 
+    <%= link_to pluralize(@movie.reviews.size, "review"),movie_reviews_path(@movie), class: "reviews" %>
+      <%= link_to "Write Review", new_movie_review_path(@movie),
+             class: 'button ok write-review' %>
+
 <article class="movie">
   <ul>
     <div class="movie-image">
@@ -14,6 +18,11 @@
     </div>
     <div class="movie-description">
       <h1><%= @movie.title %></h1>
+
+      <h3>Average Review</h3>
+        <p>
+         <%= format_average_stars(@movie) %>
+        </p>
 
         <h3>Description</h3>
           <p>
@@ -50,14 +59,22 @@
             <%= @movie.duration %>
           </p>
     </ul>
+<!-- 
+    <% if @movie.recent_reviews.any? %>
+  <h3>Recent Reviews</h3>
+  <ol id="reviews">
+    <% @movie.recent_reviews.each do |review| %>
+       ...
+    <% end %>
+  </ol>
+  <p>
+    Read all <%= link_to pluralize(@movie.reviews.size, "review"), 
+                    movie_reviews_path(@movie) %>
+  </p>
+<% end %>
+ -->
   </div>
-    <%= link_to pluralize(@movie.reviews.size, "review"),movie_reviews_path(@movie), class: "reviews" %>
-      <%= link_to "Write Review", new_movie_review_path(@movie),
-             class: 'button ok write-review' %>
-
 </article>
-
-
 
 
 <%= render 'layouts/footer' %>
