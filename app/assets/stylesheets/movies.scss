@@ -2,26 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+fieldset, h1 {
+  color: orange;
+  font-family: sans-serif;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
 .movie-image > img {
-  width: 400px;
-  height: 550px;
+  width: 20%;
   float: left;
-  margin-right: 25px;
+  margin-right: 5px;
 }
 
 
 .movie-description {
   color: white;
-  font-color: white;
+  
+  p {
+  font-size: 14px;
+  }
 }
 
 
 .movie-description  {
   font-family: 'Lato', sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   background-color: black;
+  padding-bottom: .5%;
 }
 
-.movie-description > p {
-	font-size: 14px;
-}

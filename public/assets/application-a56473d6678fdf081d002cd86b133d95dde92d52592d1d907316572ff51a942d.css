@@ -1,0 +1,389 @@
+/* line 1, /Users/LX/rails_studio/flix/app/assets/stylesheets/errors.scss */
+#errors {
+  background-color: red;
+}
+
+/* line 5, /Users/LX/rails_studio/flix/app/assets/stylesheets/errors.scss */
+#error-list {
+  background-color: yellow;
+}
+/* line 1, /Users/LX/rails_studio/flix/app/assets/stylesheets/forms.scss */
+fieldset, h1 {
+  color: orange;
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 6, /Users/LX/rails_studio/flix/app/assets/stylesheets/forms.scss */
+.form-field {
+  color: yellow;
+  font-size: 16px;
+}
+
+/* line 11, /Users/LX/rails_studio/flix/app/assets/stylesheets/forms.scss */
+.cancel-link {
+  border-radius: 5px;
+  padding: 4px;
+  background-color: orange;
+  color: black;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* line 20, /Users/LX/rails_studio/flix/app/assets/stylesheets/forms.scss */
+.cancel-link:hover {
+  background-color: red;
+}
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+/* line 4, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+body {
+  background-image: url("bg/groove.jpg");
+  background-repeat: repeat;
+}
+
+/* line 9, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.navigation-station {
+  margin-bottom: 5px;
+}
+
+/* line 13, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+header#page-header {
+  color: #F0F0F0;
+  background: #237CBE;
+  padding: 1px;
+  border-bottom: 3px solid #1b6093;
+  font-family: 'Lato', serif;
+}
+/* line 20, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+header#page-header header, header#page-header h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 27, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+footer#page-footer {
+  color: #237CBE;
+  background: #2b2b29;
+  text-align: center;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+/* line 39, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  top: 0;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 51, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.nav-bar > li {
+  float: left;
+}
+
+/* line 56, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.nav-bar > li > a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
+}
+
+/* line 65, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.nav-bar > li a:hover:not(.active) {
+  background-color: #111;
+}
+
+/* line 70, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.active {
+  background-color: #4CAF50;
+}
+
+/* line 75, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+#movie-title {
+  padding-top: 10px;
+}
+
+/* line 80, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+#movie-title {
+  letter-spacing: 1px;
+  margin-left: 5px;
+  font-family: sans-serif;
+}
+
+/* line 87, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+#movie-title a {
+  font-size: 15px;
+  color: yellow;
+}
+
+/* line 92, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+#movie-title a:hover {
+  color: blue;
+}
+
+/* line 97, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  margin: 8px 5px;
+}
+
+/* line 104, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.movie-attribute {
+  background-color: black;
+  padding: 3px;
+  border-radius: 4px;
+  vertical-align: center;
+}
+
+/* line 112, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.movie-grid {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  text-align: center;
+}
+
+/* line 121, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+div.movie img {
+  width: 170px;
+  height: 250px;
+}
+
+/* line 128, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.movie-card {
+  background-color: transparent;
+  width: 170px;
+  height: 250px;
+  perspective: 1000px;
+}
+
+/* line 136, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.movie-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* line 147, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.movie-card:hover .movie-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* line 152, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.movie-card-front, .movie-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* line 160, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.movie-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* line 166, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.movie-card-back {
+  background-color: #465163;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* line 173, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+#delete-button {
+  background-color: #ff8490;
+  border: none;
+  padding: 2px 3px;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+
+/* line 183, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+#delete-button:hover {
+  background-color: #ff0018;
+}
+
+/* line 188, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+#delete-button a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 194, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.seen {
+  font-size: 20px;
+  color: #3493ff;
+  margin-left: 5px;
+  position: absolute;
+  bottom: 20px;
+}
+
+/* line 203, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.seen:hover {
+  color: yellow;
+}
+
+/* line 208, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.fa-eye-slash {
+  color: #f43030;
+}
+
+/* line 213, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.flash {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* line 222, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.notice {
+  background-color: green;
+}
+
+/* line 227, /Users/LX/rails_studio/flix/app/assets/stylesheets/layout.scss */
+.alert {
+  background-color: red;
+}
+/* line 5, /Users/LX/rails_studio/flix/app/assets/stylesheets/movies.scss */
+.movie-image > img {
+  width: 400px;
+  height: 550px;
+  float: left;
+  margin-right: 25px;
+}
+
+/* line 13, /Users/LX/rails_studio/flix/app/assets/stylesheets/movies.scss */
+.movie-description {
+  color: white;
+  font-color: white;
+}
+
+/* line 19, /Users/LX/rails_studio/flix/app/assets/stylesheets/movies.scss */
+.movie-description {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  background-color: black;
+}
+
+/* line 25, /Users/LX/rails_studio/flix/app/assets/stylesheets/movies.scss */
+.movie-description > p {
+  font-size: 14px;
+}
+/* reviews link */
+/* line 7, /Users/LX/rails_studio/flix/app/assets/stylesheets/reviews.scss */
+.reviews, .write-review {
+  padding: 2px;
+  font-size: 15px;
+  background-color: white;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* line 17, /Users/LX/rails_studio/flix/app/assets/stylesheets/reviews.scss */
+.review-title {
+  color: lightgreen;
+}
+
+/* line 22, /Users/LX/rails_studio/flix/app/assets/stylesheets/reviews.scss */
+.review {
+  background-color: white;
+  width: 30%;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 30, /Users/LX/rails_studio/flix/app/assets/stylesheets/reviews.scss */
+.review > p {
+  font-size: 20px;
+  margin-left: 12px;
+}
+
+/* line 35, /Users/LX/rails_studio/flix/app/assets/stylesheets/reviews.scss */
+#user {
+  background-color: #afceff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-left: 10px;
+  border-bottom: 2px solid #7681DF;
+}
+
+/* line 45, /Users/LX/rails_studio/flix/app/assets/stylesheets/reviews.scss */
+#user-name {
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+/* line 51, /Users/LX/rails_studio/flix/app/assets/stylesheets/reviews.scss */
+#time-posted {
+  color: black;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  margin-right: 5%;
+  float: right;
+  margin-top: 6px;
+}
+
+/* line 60, /Users/LX/rails_studio/flix/app/assets/stylesheets/reviews.scss */
+#star {
+  font-size: 20px;
+}
+
+/* line 64, /Users/LX/rails_studio/flix/app/assets/stylesheets/reviews.scss */
+#user, #date {
+  font-size: 15px;
+}
+
+/*
+<header id="content-header">
+  <h1>Reviews for <%= link_to(@movie.title, @movie) %></h1>
+</header>
+
+
+  <% @reviews.each do |review| %>
+  <div class="review">
+      <p class="star"><%= pluralize(review.stars, 'star') %></p>
+      <p class="user">by <%= review.name %></p>
+      <p class="date"><%= time_ago_in_words(review.created_at) %> ago</p>
+      <p>
+        &quot;<%= review.comment %>&quot;
+      </p>
+  </div>
+  <% end %>
+*/
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
