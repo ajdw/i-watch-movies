@@ -10,7 +10,7 @@ fieldset, h1 {
 }
 
 .movie-image > img {
-  width: 20%;
+  width: 33%;
   float: left;
   margin-right: 5px;
 }
@@ -20,14 +20,13 @@ fieldset, h1 {
   color: white;
   
   p {
-  font-size: 14px;
+  font-size: 16px;
   }
 }
 
 
 .movie-description  {
   font-family: 'Lato', sans-serif;
-  font-size: 13px;
   background-color: black;
   padding-bottom: .5%;
 }
