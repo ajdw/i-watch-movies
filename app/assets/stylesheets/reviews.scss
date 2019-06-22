@@ -11,12 +11,15 @@
 	text-decoration: none;
 	border-radius: 2px;
 	margin-left: 10px;
-}y
-
-.review-title {
-	color: lightgreen;
 }
 
+.write-review:hover {
+	background-color: #DCE81A;
+}
+
+.reviews:hover {
+	background-color: #30C602;
+}
 
 .review {
 	background-color: white;
@@ -29,6 +32,15 @@
 .review > p {
 	font-size: 20px;
 	margin-left: 12px;
+}
+
+.review-title {
+	color: white;
+	text-decoration: none;
+}
+
+.review-title:hover {
+	color: yellow;
 }
 
 #user {

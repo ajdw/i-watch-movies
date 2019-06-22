@@ -11,12 +11,12 @@
       <%= link_to "Write Review", new_movie_review_path(@movie),
              class: 'button ok write-review' %>
 
-<article class="movie">
-  <ul>
-    <div class="movie-image">
-      <%= image_for(@movie) %>
-    </div>
+
     <div class="movie-description">
+
+      <%= image_for(@movie) %>
+
+
       <h1><%= @movie.title %></h1>
 
       <h3>Average Review</h3>
@@ -58,21 +58,7 @@
           <p>
             <%= @movie.duration %>
           </p>
-    </ul>
-<!-- 
-    <% if @movie.recent_reviews.any? %>
-  <h3>Recent Reviews</h3>
-  <ol id="reviews">
-    <% @movie.recent_reviews.each do |review| %>
-       ...
-    <% end %>
-  </ol>
-  <p>
-    Read all <%= link_to pluralize(@movie.reviews.size, "review"), 
-                    movie_reviews_path(@movie) %>
-  </p>
-<% end %>
- -->
-  </div>
+</div>
+
 
 <%= render 'layouts/footer' %>

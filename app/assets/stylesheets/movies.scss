@@ -7,17 +7,30 @@ fieldset, h1 {
   font-family: sans-serif;
   font-weight: 900;
   letter-spacing: 1px;
+  padding-top: 15px;
 }
 
-.movie-image > img {
-  width: 33%;
+.movie-description > h1 {
+  margin-bottom: -10px;
+}
+
+.movie-description > img {
   float: left;
-  margin-right: 5px;
+  margin-right: 15px;
+  width: 400px;
 }
 
 
 .movie-description {
   color: white;
+
+  h3 {
+  font-size: 15px;
+  margin-bottom: 5px;
+  text-align: left;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  }
   
   p {
   font-size: 16px;
@@ -28,6 +41,7 @@ fieldset, h1 {
 .movie-description  {
   font-family: 'Lato', sans-serif;
   background-color: black;
-  padding-bottom: .5%;
+  display: block;
+  padding-bottom: 50px;
 }
 

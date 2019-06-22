@@ -1,7 +1,7 @@
 <!-- THIS IS OUR VIEW FILE -->
 <title>The Movies I've Watched</title>
-<%= render 'layouts/header' %>
 
+<%= render 'layouts/header' %>
 <%= render 'layouts/navbar' %>
 
 <% @movies.each do |movie| %>
@@ -15,7 +15,7 @@
     </div>
 
     <div class="movie-card-back">
-    	
+
   		<div id="movie-title"><%= link_to movie.title, movie %></div>
   		  	<p><%= truncate(movie.description, length: 100, separator: ' ') %></p>
   			<p><b>CAST: </b><%= movie.cast %></p>
