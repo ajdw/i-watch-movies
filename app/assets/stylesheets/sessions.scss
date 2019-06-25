@@ -1,3 +1,28 @@
-// Place all the styles related to the sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.user-head {
+	padding: 4px;
+	font-size: 15px;
+	text-align: right;
+	background: #524E55;
+	color: white;
+	float: right;
+	margin-right: 15px;
+	text-decoration: none;
+	font-family: helvetica;
+}
+
+.user-head:hover, .sign-out:hover {
+	background-color: #F5EDEB;
+	color: black;
+}
+
+.sign-out {
+	padding: 4px;
+	font-size: 15px;
+	text-align: right;
+	background: #524E55;
+	color: white;
+	float: right;
+	margin-right: 15px;
+	text-decoration: none;
+	font-family: helvetica;
+}

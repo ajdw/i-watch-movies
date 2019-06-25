@@ -1,3 +1,20 @@
 <header id="page-header">
   <h2>The Movies I've Watched (Or Want To Watch)</h2>
+  <!-- Custom helper current_user -->
 </header>
+
+<div class="navigation-station">
+<ul class="nav-bar">
+  <li class="active">
+  <%= link_to 'All Movies', movies_path %></li>
+  <li><%= link_to 'Add New Movie', new_movie_path %></li>
+  <% if current_user %>
+    <p><%= link_to "Account Settings", edit_user_path(current_user), class: "user-head" %></p>
+    <p><%= link_to current_user.name, current_user, class: "user-head" %></p>
+    <%= link_to 'Sign Out', session_path, method: :delete, class: 'button sign-out' %>
+  <% else %>
+    <%= link_to 'Sign Up', signup_path, class: 'button sign-up' %>
+    <%= link_to 'Sign In', new_session_path, class: 'button sign-up' %>
+  <% end %>
+</ul>
+</div>

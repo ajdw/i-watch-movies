@@ -75,22 +75,3 @@
 #user, #date {
 	font-size: 15px;
 }
-
-
-/*
-<header id="content-header">
-  <h1>Reviews for <%= link_to(@movie.title, @movie) %></h1>
-</header>
-
-
-  <% @reviews.each do |review| %>
-  <div class="review">
-      <p class="star"><%= pluralize(review.stars, 'star') %></p>
-      <p class="user">by <%= review.name %></p>
-      <p class="date"><%= time_ago_in_words(review.created_at) %> ago</p>
-      <p>
-        &quot;<%= review.comment %>&quot;
-      </p>
-  </div>
-  <% end %>
-*/

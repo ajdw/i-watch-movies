@@ -1,8 +1,7 @@
-
 <!-- Here we use Ruby's form_for helper (which takes a block) with an 'f' object binded to @user -->
 <%= form_for(@user) do |f| %>
   <%= render "shared/errors", object: @user %>
-  <fieldset>
+  <fieldset id="edit-form">
     <ol>
       <li class="required">
         <!-- We use the 'f' object to make form elements -->
@@ -10,6 +9,11 @@
         <%= f.label :name %>
         <!-- the text_field helper creates a text field -->
         <%= f.text_field :name, size: 40, autofocus: true %>
+      </li>
+      <li class="required">
+      <%= f.label :username %>
+      <%= f.text_field :username, size: 40,
+                    placeholder: "Alphanumeric characters only!" %>
       </li>
       <li class="required">
         <%= f.label :email %>
