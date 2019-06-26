@@ -1,21 +1,28 @@
-<title>The Movies I've Watched</title>
-  <%= render 'layouts/header' %>
+<title>Movies</title>
+<header id="page-header">
+  <h2>The Movies I've Watched (Or Want To Watch)</h2>
+</header>
   <ul class="nav-bar">
   <li class="active"><%= link_to 'All Movies', movies_path %></li>
-  <li><%= link_to 'Add New Movie', new_movie_path %></li>
-  <li><%= link_to "Edit", edit_movie_path(@movie) %></li>
-  <li><%= link_to "Delete", movie_path(@movie), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  <% if current_user %>
+    <li><%= link_to 'Add New Movie', new_movie_path %></li>
+    <li><%= link_to "Edit", edit_movie_path(@movie) %></li>
+    <li><%= link_to "Delete", movie_path(@movie), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    <p><%= link_to 'Sign Out', session_path, method: :delete, class: 'sign-out' %></p>
+    <p><%= link_to "Account Settings", edit_user_path(current_user), class: "user-head" %></p>
+    <p><%= link_to current_user.name, current_user, class: "user-head", id: "the-user" %></p>
+  <% else %>
+    <%= link_to 'Sign Up', signup_path, class: 'button sign-up' %>
+    <%= link_to 'Sign In', new_session_path, class: 'button sign-up' %>
+  <% end %>
 </ul>
 
     <%= link_to pluralize(@movie.reviews.size, "review"),movie_reviews_path(@movie), class: "reviews" %>
       <%= link_to "Write Review", new_movie_review_path(@movie),
              class: 'button ok write-review' %>
 
-
     <div class="movie-description">
-
       <%= image_for(@movie) %>
-
 
       <h1><%= @movie.title %></h1>
 

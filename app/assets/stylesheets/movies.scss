@@ -10,38 +10,42 @@ fieldset, h1 {
   padding-top: 15px;
 }
 
-.movie-description > h1 {
-  margin-bottom: -10px;
-}
 
-.movie-description > img {
-  float: left;
-  margin-right: 15px;
-  width: 400px;
+.movie-description  {
+  font-family: 'Lato', sans-serif;
+  background-color: black;
+  display: inline-block;
 }
 
 
 .movie-description {
   color: white;
+  width: 100%;
+
+  h1 {
+    margin-bottom: 1px;
+    margin-top: -10px;
+  }
 
   h3 {
-  font-size: 15px;
-  margin-bottom: 5px;
-  text-align: left;
-  letter-spacing: 1px;
-  text-decoration: underline;
+    font-size: 15px;
+    margin-bottom: 5px;
+    text-align: left;
+    letter-spacing: 1px;
+    text-decoration: underline;
   }
   
   p {
-  font-size: 16px;
+    font-size: 16px;
   }
 }
 
-
-.movie-description  {
-  font-family: 'Lato', sans-serif;
-  background-color: black;
-  display: block;
-  padding-bottom: 50px;
+.movie-description > img {
+  float: left;
+  margin-right: 14px;
+  width: 415px;
 }
+
+
+
 

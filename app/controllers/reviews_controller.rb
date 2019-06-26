@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-before_action :set_movie
+	before_action :set_movie
 
 	def index
 		# @reviews is a variable that's assigned to that specific movie and its reviews
@@ -15,7 +15,7 @@ before_action :set_movie
 		@review = @movie.reviews.new(review_params)
 		if @review.save
 			redirect_to movie_reviews_path(@movie), 
-							notice: "Thank you for your review!"
+			notice: "Thank you for your review!"
 		else
 			render :new
 		end

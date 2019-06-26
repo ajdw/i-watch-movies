@@ -14,14 +14,13 @@ header#page-header {
   color: $secondary-color;
   background: $primary-color;
   padding: 1px;
-  padding-bottom: 16px;
   border-bottom: 3px solid darken($primary-color, 10%);
   font-family: 'Lato', serif;
-  
+
   header, h2 {
-  text-align: center;
-  text-transform: uppercase;
-	 }
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
 
 
@@ -32,9 +31,7 @@ footer#page-footer {
   padding: 5px;
   width: 100%;
   position: absolute;
-  right: 0;
   bottom: 0;
-  left: 0;
   padding: 1rem;
 }
 
@@ -55,7 +52,6 @@ footer#page-footer {
   float: left;
 }
 
-
 .nav-bar > li > a {
   display: block;
   color: white;
@@ -68,7 +64,6 @@ footer#page-footer {
 .nav-bar > li a:hover:not(.active) {
   background-color: #111;
 }
-
 
 .active {
   background-color: #4CAF50;

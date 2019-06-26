@@ -3,9 +3,9 @@
 const seenSound = new Audio("../assets/audio/sound72.wav");
 
 $(function() {
-    $(".seen").click(function() {
-    	seenSound.play()
-        $(this).toggleClass("fa-eye fa-eye-slash");
-    });
+	$(".seen").click(function() {
+		seenSound.play()
+		$(this).toggleClass("fa-eye fa-eye-slash");
+	});
 });
 

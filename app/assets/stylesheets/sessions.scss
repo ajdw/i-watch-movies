@@ -1,4 +1,4 @@
-.user-head {
+.user-head, .sign-out {
 	padding: 4px;
 	font-size: 15px;
 	text-align: right;
@@ -8,21 +8,30 @@
 	margin-right: 15px;
 	text-decoration: none;
 	font-family: helvetica;
-}
-
-.user-head:hover, .sign-out:hover {
-	background-color: #F5EDEB;
-	color: black;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 3px;
+	margin-top: 1px;
 }
 
 .sign-out {
-	padding: 4px;
-	font-size: 15px;
-	text-align: right;
-	background: #524E55;
+	background-color: #454545;
+}
+
+#the-user {
+	font-size: 20px;
 	color: white;
-	float: right;
-	margin-right: 15px;
-	text-decoration: none;
-	font-family: helvetica;
+	background: #4192FF;
+	padding-left: 17px;
+	padding-right: 17px;
+	margin-top: -2px;
+}
+
+
+#the-user:hover {
+	background-color: #0FA3FF;
+}
+
+.user-head:hover, .sign-out:hover {
+	background-color: #6C6C6C;
 }
