@@ -9,6 +9,7 @@
 </article>
 
 <footer>
+  <% if current_user?(@user) %>
   <nav>
     <%= link_to 'Edit Account', edit_user_path(@user), class: 'button' %>
     <%= link_to 'Delete Account', @user,
@@ -16,4 +17,5 @@
                 data: { confirm: 'Are you sure you want to permanently delete your account?' },
                 class: 'button' %>
   </nav>
+  <% end %>
 </footer>

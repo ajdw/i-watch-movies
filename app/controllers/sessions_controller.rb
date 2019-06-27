@@ -6,7 +6,10 @@ class SessionsController < ApplicationController
     if user = User.authenticate(params[:email], params[:password])
       session[:user_id] = user.id
       flash[:notice] = "Welcome back, #{user.name}!"
-      redirect_to user
+      # redirect back to url in session if one exists OR if there isn't one, deafult to user's profile page
+      redirect_to(session[:intended_url] || user)
+      # after redirecting, assign session key to the value of nil, thus dumping the stored intended url
+      session[:intended_url] = nil
     else
       flash.now[:alert] = "Invalid email/password combination!"
       render :new

@@ -1,17 +1,17 @@
 .user-head, .sign-out {
-	padding: 4px;
-	font-size: 15px;
-	text-align: right;
 	background: #524E55;
+	border-radius: 3px;
 	color: white;
 	float: right;
-	margin-right: 15px;
-	text-decoration: none;
 	font-family: helvetica;
+	font-size: 15px;
+	margin-right: 15px;
+	margin-top: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
-	border-radius: 3px;
-	margin-top: 1px;
+	padding: 4px;
+	text-align: right;
+	text-decoration: none;
 }
 
 .sign-out {
@@ -19,12 +19,12 @@
 }
 
 #the-user {
-	font-size: 20px;
-	color: white;
 	background: #4192FF;
+	color: white;
+	font-size: 20px;
+	margin-top: -2px;
 	padding-left: 17px;
 	padding-right: 17px;
-	margin-top: -2px;
 }
 
 

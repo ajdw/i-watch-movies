@@ -12,22 +12,22 @@ ul#users {
 
 article#user {
  p {
-   padding: .5em 0;
    font-size: 1.15em;
    line-height: 1.25em;
+   padding: .5em 0;
  }
 
  h2 {
-   margin: 0;
-   font-size: 100%;
    color: blue;
+   font-size: 100%;
+   margin: 0;
  }
 
  h3 {
-   padding-bottom: .5em;
-   margin: 1em 0;
-   font-size: 120%;
    border-bottom: 1px solid red;
+   font-size: 120%;
+   margin: 1em 0;
+   padding-bottom: .5em;
 
    &.no-rule {
      border: none;
@@ -35,9 +35,9 @@ article#user {
  }
 
  img {
+   border: 3px solid red;
    float: left;
    margin-right: 20px;
-   border: 3px solid red;
  }
 
  header {
