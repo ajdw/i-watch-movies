@@ -1,0 +1,45 @@
+<div class="movie-description">
+  <%= image_for(@movie) %>
+
+    <h1><%= @movie.title %></h1>
+
+      <h3>Average Review</h3>
+        <p>
+         <%= format_average_stars(@movie) %>
+        </p>
+
+        <h3>Description</h3>
+          <p>
+            <%= @movie.description %>
+          </p>
+
+        <h3>Rating</h3>
+          <p>
+           <%= @movie.rating %>
+          </p>
+
+        <h3>Released On</h3>
+          <p>
+            <%= @movie.released_on %>
+          </p>
+
+        <h3>Total Gross</h3>
+          <p>
+            <%= format_total_gross(@movie) %>
+          </p>
+
+        <h3>Cast</h3>
+          <p>
+           <%= @movie.cast %>
+          </p>
+
+        <h3>Director</h3>
+          <p>
+         <%= @movie.director %>
+          </p>
+
+        <h3>Duration</h3>
+          <p>
+            <%= @movie.duration %>
+          </p>
+</div>

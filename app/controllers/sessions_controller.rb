@@ -23,3 +23,5 @@ class SessionsController < ApplicationController
     redirect_to root_url, notice: "You're now signed out!"
   end
 end
+
+

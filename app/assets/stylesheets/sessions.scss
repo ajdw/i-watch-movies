@@ -18,6 +18,19 @@
 	background-color: #454545;
 }
 
+#the-admin {
+	background: yellow;
+	color: red;
+	font-size: 20px;
+	margin-top: -2px;
+	padding-left: 17px;
+	padding-right: 17px;
+}
+
+#the-admin:hover {
+	background-color: #FFFF93;
+}
+
 #the-user {
 	background: #4192FF;
 	color: white;
@@ -26,7 +39,6 @@
 	padding-left: 17px;
 	padding-right: 17px;
 }
-
 
 #the-user:hover {
 	background-color: #0FA3FF;

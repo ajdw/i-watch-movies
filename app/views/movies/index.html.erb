@@ -25,10 +25,12 @@
 				<i class="far fa-eye seen"></i></p>
 
 				<div>
+			<% if current_user_admin? %>
 				 <button id="delete-button">
 				 <%= link_to "DELETE", movie, method: :delete, data: { confirm: 'Are you sure?' } %>
 				</button>
-				</div>
+			<% end %>
+			</div>
     </div>
   </div>
 </div>

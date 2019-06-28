@@ -3,6 +3,7 @@
   <%= render "shared/errors", object: @user %>
   <fieldset id="edit-form">
     <ol>
+
       <li class="required">
         <!-- We use the 'f' object to make form elements -->
         <!-- the label creates a label with name -->
@@ -10,19 +11,23 @@
         <!-- the text_field helper creates a text field -->
         <%= f.text_field :name, size: 40, autofocus: true %>
       </li>
+
       <li class="required">
       <%= f.label :username %>
       <%= f.text_field :username, size: 40,
                     placeholder: "Alphanumeric characters only!" %>
       </li>
+
       <li class="required">
         <%= f.label :email %>
         <%= f.email_field :email, size: 40 %>
       </li>
+
       <li class="required">
         <%= f.label :password %>
         <%= f.password_field :password, size: 40 %>
       </li>
+      
       <li class="required">
         <%= f.label :password_confirmation, "Confirm Password" %>
         <%= f.password_field :password_confirmation, size: 40 %>

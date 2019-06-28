@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
 	end
 
 	def new
-		# We are assigning the @review variable equal to 
+		# We are assigning the @review variable equal to a new movie review
 		@review = @movie.reviews.new
 	end
 
