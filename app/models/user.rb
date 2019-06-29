@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
+  has_many :reviews, dependent: :destroy
 
   validates :name, presence: true
 
@@ -15,5 +16,4 @@ class User < ApplicationRecord
     user = User.find_by(email: email_or_username) || User.find_by(username: email_or_username)
     user && user.authenticate(password)
   end
-
 end
