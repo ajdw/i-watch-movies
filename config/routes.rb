@@ -1,4 +1,5 @@
 =begin Rails.application.routes.draw do
+  resources :favorites
   resources :users
   resources :reviews
    For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -20,6 +21,7 @@ Rails.application.routes.draw do
   # uses a built-in Rails convention to dynamically define a bunch of routes
   resources :movies do
     resources :reviews
+    resources :favorites
   end
 
 end
