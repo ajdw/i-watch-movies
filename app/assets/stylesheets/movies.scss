@@ -23,7 +23,7 @@ fieldset, h1 {
   width: 100%;
 
   h1 {
-    margin-bottom: -5px;
+    margin-bottom: 3px;
     margin-top: -10px;
   }
 
@@ -38,8 +38,7 @@ fieldset, h1 {
   }
   
   p {
-    font-size: 15px;
-    margin-bottom: -9px;
+    font-size: 12pt;
   }
 }
 
@@ -48,6 +47,30 @@ fieldset, h1 {
   margin-right: 14px;
   width: 415px;
 }
+
+.movie-info {
+   * {
+    display: inline;
+  }
+
+  h3 {
+    text-decoration: none;
+  }
+}
+
+#top-line {
+  margin-bottom: -6px;
+}
+
+#bottom-line {
+  margin-top: -2px;
+}
+
+ hr {
+    margin-right: 10px;
+    margin-top: 2px;
+    background-color: white;
+  }
 
 
 

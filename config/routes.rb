@@ -1,4 +1,5 @@
 =begin Rails.application.routes.draw do
+  resources :genres
   resources :favorites
   resources :users
   resources :reviews
@@ -7,6 +8,7 @@
 =end 
 
 Rails.application.routes.draw do
+  resources :genres
   get "signup" => "users#new"
   get "signin" => "sessions#new"
   resources :users

@@ -22,6 +22,7 @@ class ReviewsController < ApplicationController
 		else
 			render :new
 		end
+	end
 
 	private 
 	def review_params
@@ -32,7 +33,5 @@ class ReviewsController < ApplicationController
 		# @movies is a variable that's assigned to Movie with a method that will find, by parameters, the movie_id
 		@movie = Movie.find(params[:movie_id])
 	end
-
-
-
 end
+

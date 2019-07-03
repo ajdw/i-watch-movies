@@ -10,10 +10,10 @@ before_action :require_admin, except: [:index, :show]
   end
 
   def show
-    # assigning the instance variable of @movie to equal the Movie object and finding the associated movie by passing through the params
-    # a params for the movie :id
+#instance variable @movie assigned Movie object, method to find, and parameters with :id of associated movie
     @movie = Movie.find(params[:id])
     @fans = @movie.fans
+    @genres = @movie.genres
     if current_user
     @current_favorite = current_user.favorites.find_by(movie_id: @movie.id)
     end
@@ -54,6 +54,6 @@ before_action :require_admin, except: [:index, :show]
 
 private
   def movie_params
-    params.require(:movie).permit(:title, :description, :rating, :released_on, :total_gross, :cast, :director, :duration, :image_file_name)
+    params.require(:movie).permit(:title, :description, :rating, :released_on, :total_gross, :cast, :director, :duration, :image_file_name, genre_ids: [])
   end
   end
