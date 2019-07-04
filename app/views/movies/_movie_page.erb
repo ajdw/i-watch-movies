@@ -1,3 +1,4 @@
+<% content_for(:title, "#{@movie.title} (#{@movie.released_on.year})") %>
 <div class="movie-description">
   <%= image_for(@movie) %>
     <h1><%= @movie.title %></h1>
@@ -38,17 +39,17 @@
             <%= @movie.description %>
           </p>
 <hr>
-
+        <% if @fans.any? %>
           <h3>Fans</h3>
             <p>
               <%= pluralize(@fans.size, 'fan') %>
             </p>
-                <% if @fans.any? %>
                 <p>
                   <% @fans.each do |user| %> 
                     <%= link_to user.name, user %>
               <% end %>
               <% end %>
+
               <% if current_user %>
                 <% if @current_favorite %>
                   <%= button_to "Unfave", movie_favorite_path(@movie, @current_favorite), method: :delete, class: 'button unfave' %>

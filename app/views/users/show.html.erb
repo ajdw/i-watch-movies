@@ -1,5 +1,5 @@
 <%= render 'layouts/header' %>
-
+<% content_for(:title, @user.name) %>
 <article id="user">
   <header>
     <h1><%= @user.name %></h1>
