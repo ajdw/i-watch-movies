@@ -22,6 +22,7 @@ class Movie < ApplicationRecord
   scope :upcoming, -> {  where("released_on > ?", Time.now).order(released_on: :asc) }
   scope :rated, ->(rating) { released.where(rating: rating) }
   scope :recent, ->(max=5) { released.limit(max) }
+  scope :flops, ->{ released.where('total_gross <= 50000000').order(total_gross: :asc) }
 
   def flop?
     total_gross.blank? || total_gross < 50000000

@@ -1,20 +1,36 @@
 <div class="navigation-station">
 <ul class="nav-bar">
   <li class="active">
-  <%= link_to 'All Movies', movies_path %></li>
-<% if current_user_admin? %>
-  <li><%= link_to 'Add New Movie', new_movie_path %></li>
-<% end %>
+    <%= link_to 'Released', movies_path %>
+  </li>
+  <li class="movies">
+    <%= link_to 'Upcoming', filtered_movies_path(:upcoming), class: 'button' %>
+  </li>
+  <li class="movies">
+    <%= link_to 'Recent', filtered_movies_path(:recent), class: 'button' %>
+  </li>
+  <li class="movies">
+    <%= link_to 'Hits', filtered_movies_path(:hits), class: 'button' %>
+  </li>
+  <li class="movies">
+    <%= link_to 'Flops', filtered_movies_path(:flops), class: 'button' %>
+  </li>
+
+  <% if current_user_admin? %>
+    <li><%= link_to 'Add New Movie', new_movie_path %></li>
+  <% end %>
 
   <% if current_user %>
+
     <p><%= link_to 'Sign Out', session_path, method: :delete, class: 'sign-out' %></p>
     <p><%= link_to "Account Settings", edit_user_path(current_user), class: "user-head" %></p>
     <p><%= link_to current_user.name, current_user, class: "user-head", id: current_user.admin ? 'the-admin' : 'the-user' %></p>
- 
+
   <% else %>
 
     <%= link_to 'Sign Up', signup_path, class: 'button sign-up' %>
     <%= link_to 'Sign In', new_session_path, class: 'button sign-up' %>
   <% end %>
+
 </ul>
 </div>
