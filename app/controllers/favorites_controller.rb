@@ -10,7 +10,6 @@ class FavoritesController < ApplicationController
 	end
 
 	def destroy
-
 		favorite = current_user.favorites.find(params[:id])
 		favorite.destroy
 		redirect_to @movie, notice: "Sorry you unfaved it!"
@@ -19,6 +18,6 @@ class FavoritesController < ApplicationController
 # private method
 private
 	def set_movie
-		@movie = Movie.find(params[:movie_id])
+		@movie = Movie.find_by!(slug: params[:movie_id])
 	end
 end

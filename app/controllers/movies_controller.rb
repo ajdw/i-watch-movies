@@ -4,6 +4,7 @@ class MoviesController < ApplicationController
 
 before_action :require_signin, except: [:index, :show]
 before_action :require_admin, except: [:index, :show]
+before_action :set_movie, only: [:show, :edit, :update, :destroy]
 
   def index
     case params[:scope]
@@ -22,7 +23,6 @@ before_action :require_admin, except: [:index, :show]
 
   def show
 #instance variable @movie assigned Movie object, method to find, and parameters with :id of associated movie
-    @movie = Movie.find(params[:id])
     @fans = @movie.fans
     @genres = @movie.genres
 
@@ -32,12 +32,11 @@ before_action :require_admin, except: [:index, :show]
   end
 
   def edit
-    @movie = Movie.find(params[:id])
   end
 
 # if update is successful, redirect to movie show page, else, show the edit form
   def update
-    @movie = Movie.find(params[:id])
+    # @movie = Movie.find(params[:id])
     if @movie.update(movie_params)
       redirect_to movies_url, notice: "Movie successfully updated!"
     else
@@ -59,7 +58,7 @@ before_action :require_admin, except: [:index, :show]
   end
 
   def destroy
-    @movie = Movie.find(params[:id])
+    # @movie = Movie.find(params[:id])
     @movie.destroy
     redirect_to movies_url, alert: "Movie successfully deleted!"
   end
@@ -67,5 +66,9 @@ before_action :require_admin, except: [:index, :show]
 private
   def movie_params
     params.require(:movie).permit(:title, :description, :rating, :released_on, :total_gross, :cast, :director, :duration, :image_file_name, genre_ids: [])
+  end
+
+  def set_movie
+    @movie = Movie.find_by!(slug: params[:id])
   end
 end

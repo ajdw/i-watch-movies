@@ -31,7 +31,7 @@ class ReviewsController < ApplicationController
 
 	def set_movie
 		# @movies is a variable that's assigned to Movie with a method that will find, by parameters, the movie_id
-		@movie = Movie.find(params[:movie_id])
+		@movie = Movie.find_by!(slug: params[:movie_id])
 	end
 end
 

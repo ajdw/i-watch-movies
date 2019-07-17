@@ -1,5 +1,7 @@
 class Movie < ApplicationRecord
-
+  before_validation :generate_slug
+  validates :title, presence: true, uniqueness: true
+  validates :slug, uniqueness: true
   validates :title, :released_on, :duration, presence: true
   validates :description, length: { minimum: 25 }
   validates :total_gross, numericality: { greater_than_or_equal_to: 0 }
@@ -28,9 +30,18 @@ class Movie < ApplicationRecord
     total_gross.blank? || total_gross < 50000000
   end
 
+  def to_param
+    slug
+  end
+
   def average_stars
     reviews.average(:stars)
   end
+
+  def generate_slug
+    self.slug ||= title.parameterize if title
+  end
+
 
   def recent_reviews
     reviews.order('created_at desc').limit(2)
