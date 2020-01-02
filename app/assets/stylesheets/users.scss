@@ -1,0 +1,64 @@
+@import "colors";
+
+#user h1 {
+   color: green;
+   font-size: 20pt;
+}
+
+
+ul#users {
+ font-size: 1.15em;
+ list-style: none;
+ padding: 0;
+
+ li {
+   margin: 1em 0;
+ }
+}
+
+article#user {
+ p {
+   font-size: 1.15em;
+   line-height: 1.25em;
+   padding: .5em 0;
+ }
+
+ h2 {
+   color: blue;
+   font-size: 100%;
+   margin: 0;
+ }
+
+ h3 {
+   border-bottom: 1px solid red;
+   font-size: 120%;
+   margin: 1em 0;
+   padding-bottom: .5em;
+
+   &.no-rule {
+     border: none;
+   }
+ }
+
+ img {
+   border: 3px solid red;
+   float: left;
+   margin-right: 20px;
+ }
+
+ header {
+   margin-bottom: 3em;
+ }
+
+ footer {
+   margin: 2em 0;
+   text-align: center;
+
+   nav {
+     margin-top: 2em;
+   }
+ }
+}
+
+
+

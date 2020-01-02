@@ -1,0 +1,19 @@
+
+<% @reviews.each do |review| %>
+  <div class="review">
+  	  <div id="user"><span id="user-name">by <%= link_to review.user.name, review.user %></span>
+
+  	  <span id="time-posted"><%= review.created_at.strftime('%a %m/%d/%Y %T') %> 
+      (<%= time_ago_in_words(review.created_at) %> ago)
+  	  </span>
+      
+      </div>
+
+      <p id="star"><%= pluralize(review.stars, 'star') %></p>
+      <hr>
+
+      <p>
+        &quot;<%= review.comment %>&quot;
+      </p>
+
+<% end %>

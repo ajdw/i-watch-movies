@@ -1,22 +1,23 @@
-fieldset, h1 {
-	color: orange;
-	font-family: 'Lato', sans-serif;
-}
-
 .form-field {
 	color: yellow;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 .cancel-link {
-	border-radius: 5px;
-	padding: 4px;
 	background-color: orange;
+	border-radius: 5px;
 	color: black;
 	font-size: 12px;
+	padding: 4px;
 	text-decoration: none;
 }
 
 .cancel-link:hover {
 	background-color: red;
+}
+
+
+#edit-form {
+	background: white;
+	width: 40%;
 }

@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
-before_action :set_movie
+	# use a built-in rails control action method (before_action) with our custom :require_signin method
+	before_action :require_signin
+	before_action :set_movie
 
 	def index
 		# @reviews is a variable that's assigned to that specific movie and its reviews
@@ -7,15 +9,16 @@ before_action :set_movie
 	end
 
 	def new
-		# We are assigning the @review variable equal to 
+		# We are assigning the @review variable equal to a new movie review
 		@review = @movie.reviews.new
 	end
 
 	def create
 		@review = @movie.reviews.new(review_params)
+		@review.user = current_user
 		if @review.save
 			redirect_to movie_reviews_path(@movie), 
-							notice: "Thank you for your review!"
+			notice: "Thank you for your review!"
 		else
 			render :new
 		end
@@ -23,14 +26,12 @@ before_action :set_movie
 
 	private 
 	def review_params
-		params.require(:review).permit(:name, :comment, :stars)
+		params.require(:review).permit(:comment, :stars)
 	end
 
 	def set_movie
 		# @movies is a variable that's assigned to Movie with a method that will find, by parameters, the movie_id
-		@movie = Movie.find(params[:movie_id])
+		@movie = Movie.find_by!(slug: params[:movie_id])
 	end
-
-
-
 end
+

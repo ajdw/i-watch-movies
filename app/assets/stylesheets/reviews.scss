@@ -1,29 +1,28 @@
-// Place all the styles related to the Reviews controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 /* reviews link */
 .reviews, .write-review {
-	padding: 2px;
-	font-size: 15px;
 	background-color: white;
+	border-radius: 2px;
 	font-family: 'Lato', sans-serif;
+	font-size: 17px;
+	margin-left: 10px;
+	padding: 2px;
 	text-decoration: none;
-	border-radius: 5px;
-
 }
 
-.review-title {
-	color: lightgreen;
+.write-review:hover {
+	background-color: #DCE81A;
 }
 
+.reviews:hover {
+	background-color: #30C602;
+}
 
 .review {
 	background-color: white;
-	width: 30%;
 	border-radius: 5px;
-	padding-bottom: 10px;
 	margin-bottom: 10px;
+	padding-bottom: 10px;
+	width: 30%;
 }
 
 .review > p {
@@ -31,28 +30,37 @@
 	margin-left: 12px;
 }
 
+.review-title {
+	color: white;
+	text-decoration: none;
+}
+
+.review-title:hover {
+	color: yellow;
+}
+
 #user {
 	background-color: #afceff;
+	border-bottom: 2px solid #7681DF;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	padding-bottom: 5px;
-	padding-top: 10px;
 	padding-left: 10px;
-	border-bottom: 2px solid #7681DF;
+	padding-top: 10px;
 }
 
 #user-name {
-	font-size: 20px;
 	font-family: 'Lato', sans-serif;
+	font-size: 20px;
 	font-weight: bold;
 }
 
 #time-posted {
 	color: black;
+	float: right;
 	font-family: 'Lato', sans-serif;
 	font-size: 15px;
 	margin-right: 5%;
-	float: right;
 	margin-top: 6px;
 }
 
@@ -63,22 +71,3 @@
 #user, #date {
 	font-size: 15px;
 }
-
-
-/*
-<header id="content-header">
-  <h1>Reviews for <%= link_to(@movie.title, @movie) %></h1>
-</header>
-
-
-  <% @reviews.each do |review| %>
-  <div class="review">
-      <p class="star"><%= pluralize(review.stars, 'star') %></p>
-      <p class="user">by <%= review.name %></p>
-      <p class="date"><%= time_ago_in_words(review.created_at) %> ago</p>
-      <p>
-        &quot;<%= review.comment %>&quot;
-      </p>
-  </div>
-  <% end %>
-*/

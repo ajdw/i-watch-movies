@@ -1,8 +1,7 @@
 <!-- THIS IS OUR VIEW FILE -->
 <title>The Movies I've Watched</title>
 <%= render 'layouts/header' %>
-
-<%= render 'layouts/navbar' %>
+<%= render 'layouts/navigation' %>
 
 <% @movies.each do |movie| %>
 
@@ -15,7 +14,7 @@
     </div>
 
     <div class="movie-card-back">
-    	
+
   		<div id="movie-title"><%= link_to movie.title, movie %></div>
   		  	<p><%= truncate(movie.description, length: 100, separator: ' ') %></p>
   			<p><b>CAST: </b><%= movie.cast %></p>
@@ -23,13 +22,15 @@
 				<p><b>RELEASED:</b>  <%= movie.released_on %></p>
 				<p><b>DURATION:</b>  <%= movie.duration %></p>
 				<p><b>TOTAL GROSS:</b> <%= format_total_gross(movie) %></p>
-				<i class="far fa-eye seen"></i></p>
+				<!-- <i class="far fa-eye seen"></i></p> -->
 
 				<div>
+			<% if current_user_admin? %>
 				 <button id="delete-button">
 				 <%= link_to "DELETE", movie, method: :delete, data: { confirm: 'Are you sure?' } %>
 				</button>
-				</div>
+			<% end %>
+			</div>
     </div>
   </div>
 </div>
